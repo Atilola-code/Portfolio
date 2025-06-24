@@ -5,6 +5,7 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-600: oklch(57.7% 0.245 27.325);
@@ -402,6 +403,13 @@
       margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-x-0 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 0) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 0) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .space-x-2 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -500,6 +508,9 @@
   .border-x-yellow-600 {
     border-inline-color: var(--color-yellow-600);
   }
+  .border-y-amber-500 {
+    border-block-color: var(--color-amber-500);
+  }
   .border-y-red-600 {
     border-block-color: var(--color-red-600);
   }
@@ -563,6 +574,15 @@
   .text-center {
     text-align: center;
   }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -602,6 +622,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-amber-500 {
+    color: var(--color-amber-500);
   }
   .text-gray-800 {
     color: var(--color-gray-800);
@@ -711,6 +734,11 @@
       margin-top: calc(var(--spacing) * 8);
     }
   }
+  .md\:mt-10 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
   .md\:mt-12 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 12);
@@ -721,6 +749,11 @@
       margin-top: calc(var(--spacing) * 16);
     }
   }
+  .md\:mr-2 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 2);
+    }
+  }
   .md\:mr-32 {
     @media (width >= 48rem) {
       margin-right: calc(var(--spacing) * 32);
@@ -729,6 +762,16 @@
   .md\:mr-42 {
     @media (width >= 48rem) {
       margin-right: calc(var(--spacing) * 42);
+    }
+  }
+  .md\:mr-48 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 48);
+    }
+  }
+  .md\:mr-62 {
+    @media (width >= 48rem) {
+      margin-right: calc(var(--spacing) * 62);
     }
   }
   .md\:ml-2 {
